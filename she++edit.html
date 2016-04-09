@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>She++</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  .bg-1 {
+      background-color: #1abc9c;
+      color: #ffffff;
+  }
+  .bg-2 {
+      background-color: #474e5d;
+      color: #ffffff;
+  }
+  .bg-3 {
+      background-color: #ffffff;
+      color: #555555;
+  }
+  .bg-4{
+      background-color: #AEE4EC;
+      color: #ffffff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .block {
+    border: none;
+    background-color: #1abc9c;
+    color: #F5FFFA;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    float: left;
+    margin-left: 50px;
+    text-align: center;
+  }
+  .emailblock1{
+    position: absolute;
+    left: 575px;
+    width: 200px;
+    float: center;
+  }
+  .emailblock2{
+    position: absolute;
+    left: 890px;
+    width: 300px;
+    height: 160px;
+    float: right;
+  }
+  .button{background-color: #AEE4EC;}
+  .slideanim {visibility:hidden;}
+
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Nav Bar starts here -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage">She++</a>
+      </div>
+      <ul class="nav navbar-nav">
+      <!--<li class="active"><a href="#">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Board</a></li>
+            <li><a href="#">Calendar</a></li>
+          </ul>
+        </li> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#eboard">Board</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+      <img src="she++logo.png" alt="SHE++ Logo" style="width:200px; height:111px; position:absolute; left: 1000px;">
+    </div>
+  </nav> <!-- end of the Nav Bar -->
+
+<!-- Container (About Us Section) -->
+<div id="about" class="container-fluid bg-2 text-center">
+  <h1>Who Are We?</h1>
+  <p>We are the ACM-Women's Chapter: SHE++. </p>
+  <p><a href="https://women.acm.org">ACM-W</a> supports, celebrates, and advocates internationally for the full engagement of women in all aspects of the computing field,
+    <br>providing a wide range of programs and services to ACM members and working in the larger community to advance the
+    <br>contributions of technical women.</p>
+</div>
+
+<!-- Container (Board Section) -->
+<div id="eboard" class="container-fluid bg-1 text-center">
+  <h1>Our Executive Board</h1>
+  <h4>Meet the current board of 2015-2016!</h4>
+</div>
+
+<!-- Container (Calendar Section) -->
+<div id="calendar" class="container-fluid bg-4 text-center">
+  <h1>Calendar</h1>
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<!-- Container (Contact Us Section) -->
+<div id="contact" class="container-fluid bg-3 text-center">
+    <h1>Contact</h1>
+    <div style="height: 250px;">
+          <div class="block">
+              <h3 >Where To Find Us</h3>
+                  <p>We meet monthly on Fridays from 3pm~4pm in Adams Hall, room 208.
+                    <br>You can always reach us at sheplusplusHofstra@gmail.com. </p>
+          </div>
+          <div class="emailblock1">
+              <form action="email.php" method="post" enctype="text/plain">
+
+                <input type="text" name="name" value="Your Name *" style="height:70px;width:300px;"><br>
+                <br>
+                <input type="text" name="mail" value="Your Email *" style="height:70px;width:300px;"><br>
+
+              <?php include 'email.php';?>
+          </div>
+          <div class="emailblock2">
+
+                <input type="text" name="comment" value="Send us a quick message here!" size="50" style="height:160px;width:300px;"><br><br>
+                <input type="submit" value="Send" class="button">
+                <input type="reset" value="Reset" class="button">
+              </form>
+          </div>
+       </div>
+</div>
+
+
+<!--
+    <div class="row">
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+-->
+<footer class="container-fluid bg-2 text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright © Hofstra University's She++</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
